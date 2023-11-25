@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,900;1,9..40,1000&display=swap');
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* basic styles */
+h1 {font-size: 4.2rem; font-weight:500; line-height: 1.4;}
+h2 {font-size: 2.8rem; font-weight: 400;line-height: 1.4;}
+h3 {font-size: 2rem; font-weight: 400;line-height: 1.4;}
+h4 {font-size: 1.8rem; font-weight: 700; line-height: 1.4;}
+p {font-size: 1.4rem;line-height: 1.2;}
+
+/* containers css */
+.container {
+    width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 12px 128px;
+}
+
+/* components css */
+
+.container header {
+    display: flex;
+    align-items: center;
+}
+
+.hero-copy {
+    height: 620px;
+    padding: 128px 256px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.triad {
+    display: flex;
+    justify-content: space-between;
+}
+
+.triad img {width: 100%;}
+
+.programs {
+    width: 30%;
+    padding: 24px 82px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* basic components */
+
+#mfi-logo {flex-grow: 1;}
+
+#mfi-logo img {width: 220px; height: auto; display: block;}
+
+
+button.main-cta {border: none; border-radius: 8px; font-size: 1.2rem; font-weight: bold; padding: 16px 24px; background-color: #999933; color: ;}
+
+#menu-button {border: none; border-radius: 8px; font-size: 1.4rem; font-weight: bold; padding: 8px 16px; background-color:white; color: ;}
+
+button.program-links {border: none; font-size: 1.2rem; font-weight: bold; padding: 16px 24px; margin: 0 auto; background-color: white;}
+
+/* hero banner */
+#hero-banner {
+    background-image: url(./img/banner-image/bg-test-2.png), url(./img/texture/bg-texture-1.svg);
+    height: 100dvh;
+    background-repeat: no-repeat, repeat;
+    background-size: 130% auto, 4%;
+    background-position: center -200px, 0 0 ;
+}
+
+/* Initial state of the menu is not displayed */
+#menu {
+    display: none;
+  }
+  
+/* Style for when the menu is displayed on mobile */
+
+@media (min-width: 340px) and (max-width: 620px) {
+
+  h1 {font-size: 2.6rem; font-weight:500; line-height: 1.2;}
+  h2 {font-size: 2.2rem; font-weight: 400; line-height: 1;}
+  h3 {font-size: 2rem; font-weight: 400;}
+  h4 {font-size: 1.8rem; font-weight: 700; text-align: center;}
+  p {font-size: 1.2rem; line-height: 1.2;}
+
+  #mfi-logo img {width: 120px;}
+
+  #hero-banner {
+    background-image: url(./img/banner-image/bg-test-2.png), url(./img/texture/bg-texture-1.svg);
+    background-repeat: no-repeat, repeat;
+    background-size: 160% auto, 4%;
+    background-position: center -20px, 0 0 ;
+}
+  
+  .wrapper {padding: 12px 24px}
+  
+  .triad {
+    flex-direction: column;
+  }
+  
+  .programs {
+    width: 100%;
+    padding: 12px 4px;
+  }
+
+  .hero-copy {
+    padding: 32px 24px;
+}
+}
+  
